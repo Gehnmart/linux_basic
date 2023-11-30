@@ -17,6 +17,7 @@
 - *Изменение часового пояса (`timezone`)*
 ![image](./images/3-2.png)
 - *Вывод сетевых интерфейсов*
-![image](./images/3-3-1.png)
+  - *Можно так:*
+  ![image](./images/3-3-1.png)
   - *Или же:*
   ![image](./images/3-3-2.png)
