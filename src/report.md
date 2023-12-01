@@ -12,6 +12,7 @@
 ###Создание нового пользователя в группе adm
 ![image](./images/2.png)
 *<sup>Добавление нового пользователя user-1.</sup>*
+
 Ввод комманды `useradd -G adm user-1`
 Вывод файла `etc/passwd`
 
@@ -43,3 +44,49 @@
 - *Вывод в консоль внешний ip-адрес шлюза (ip) и внутренний
    IP-адрес шлюза, он же ip-адрес по умолчанию (gw).*
   ![image](./images/3-4-1.png)
+
+- Задать статичные (заданные вручную, а не полученные от DHCP сервера) настройки ip, gw, dns.
+
+  ```yaml
+    #Конфиг на языке yaml
+    #/etc/netplan/config.yaml
+
+    network:
+      version: 2
+      renderer: networkd
+      ethernets:
+        enp0s3:
+          dhcp4: false
+          addresses:
+            - 10.0.2.15/22
+          gateway4: 10.0.2.2
+          nameservers:
+            addresses:
+              - 8.8.8.8
+              - 8.8.4.4
+  ```
+  затем
+  ```bash
+  sudo netplan apply
+  ifconfig
+  ```
+  ![image](./images/3-4-2.png)
+
+  -Перезагрузить виртуальную машину. Убедиться, что статичные сетевые
+  настройки (ip, gw, dns) соответствуют заданным в предыдущем пункте.
+  ```bash
+  sudo shutdown -r now
+  ifconfig 
+  ```
+  Убедимся что вывод соответствует)
+  ![image](./images/3-4-3.png)
+
+  Используем комманду ping `ip`
+  ```bash
+  ping ya.ru
+  ...
+  ping 1.1.1.1
+  ```
+  ![image](./images/3-4-4.png)
+  <sub>Вывод комманды ping</sub>
+
