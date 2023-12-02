@@ -90,3 +90,62 @@
   ![image](./images/3-4-4.png)
   <sub>Вывод комманды ping</sub>
 
+##*Part 4. Обновление ОС*
+  - Далее обновляем нашу ос:
+  ```bash
+  sudo apt update && sudo apt upgrade
+  ```
+  ![image](./images/4-1-1.png)
+
+##*Part 5. Использование команды sudo*
+  `sudo` - позволяет строго определенным пользователям выполнять указанные программы с административными привилегиями без ввода пароля суперпользователя root.
+  - Разрешить пользователю, созданному в Part 2, выполнять команду sudo:
+  Вводим комманду:
+  ```bash
+  sudo usermod -aG sudo user-1
+  ```
+  ![image](./images/5-1-1.png)
+
+##Part 6. Установка и настройка службы времени
+  ![image](./images/6-1-1.png)
+
+##Part 7. Установка и использование текстовых редакторов
+   -  jpico
+    ![image](./images/7-1-1.png)
+      > c^s - save
+       c^x - exit
+   - vim
+    ![image](./images/7-2-1.png)
+     > i - interactive mode
+       esc - command mode
+       :wq - save and exit
+   - nano
+    ![image](./images/7-3-1.png)
+     > c^s - save
+       c^x - exit
+
+  files 
+  ![image](./images/7-4-1.png)
+
+  для выхода без сохранения используем:
+  jpico
+  c^x нас спросят сохранить ли буфер нажимаем n
+  ![image](./images/7-5-1.png)
+  vim
+  :q!
+  ![image](./images/7-6-1.png)
+  nano
+  c^x нас спросят сохранить ли буфер нажимаем n
+  ![image](./images/7-7-1.png)
+
+  для замены используем:
+  jpico
+  `c^w` нас спросят что мы ищем далее G а затем на что мы хотим заменить
+  ![image](./images/7-8-1.png)
+  vim
+  `:s/mart/tram`
+  ![image](./images/7-9-1.png)
+  nano
+  `c^\` нас спросят что мы ищем а затем на что мы хотим заменить
+  ![image](./images/7-10-1.png)
+
