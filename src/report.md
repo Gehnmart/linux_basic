@@ -243,3 +243,12 @@
     ![image](./images/13-1-1.png)
   - Вывести в /var/log
     ![image](./images/13-1-2.png)
+
+##*Part 14. Работа с системными журналами*
+  - время последней успешной авторизации, имя пользователя и
+  метод входа в систему
+  ```log
+  Dec  2 22:21:02 gehnmartpc sudo: pam_unix(sudo:session): session closed for user root
+  ```
+  - скрин с сообщением о рестарте службы
+  ![image](./images/14-1-1.png)
