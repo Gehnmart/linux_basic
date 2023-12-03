@@ -248,7 +248,17 @@
   - время последней успешной авторизации, имя пользователя и
   метод входа в систему
   ```log
-  Dec  2 22:21:02 gehnmartpc sudo: pam_unix(sudo:session): session closed for user root
+  Dec  3 14:02:58 gehnmartpc systemd-logind[661]: New session 1 of user student.
   ```
   - скрин с сообщением о рестарте службы
   ![image](./images/14-1-1.png)
+
+##*Part 15. Использование планировщика заданий CRON*
+
+  - Используя планировщик заданий, запустите команду uptime через каждые 2 минуты
+    ![image](./images/15-1-1.png)
+  - Вывести на экран список текущих заданий для CRON
+    ![image](./images/15-1-2.png)
+  
+  - Удалите все задания из планировщика заданий
+    ![image](./images/15-1-2.png)
